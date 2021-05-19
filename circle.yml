@@ -6,5 +6,5 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          record: true
-          headless: false
+          executor: cypress/browsers:node14.16.0-chrome90-ff88
+          browser: chrome
