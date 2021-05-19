@@ -7,4 +7,4 @@ workflows:
     jobs:
       - cypress/run:
           record: true
-          headed: true
+          headless: false
