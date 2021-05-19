@@ -11,4 +11,4 @@ workflows:
     jobs:
       - cypress/run:
           executor: with-chrome
-          command: npx cypress run --record --browser chrome --headless
+          command: npx cypress run --record --headed
