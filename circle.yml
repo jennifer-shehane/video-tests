@@ -11,3 +11,5 @@ workflows:
     jobs:
       - cypress/run:
           executor: with-chrome
+          record: true
+          browser: chrome
