@@ -2,8 +2,13 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@1
+executors:
+  with-chrome:
+    docker:
+      - image: 'cypress/browsers:node14.16.0-chrome90-ff88'
 workflows:
   build:
     jobs:
       - cypress/run:
-          record: true
+          executor: with-chrome
+          command: npx cypress run --record --headed
